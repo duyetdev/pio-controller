@@ -1,3 +1,8 @@
+PredictionIO Controller
+==============
+
+Controlling PredictionIO (Spark, HBase stack) by Nodejs Web Application.
+
 Meteor Starter
 ==============
 
@@ -44,37 +49,3 @@ First steps:
 * Update colors in `/client/style/bootstrap-variables.less`
 * Add / edit collections in `/both/collections/`
 * Create routes and views in `/both/router.coffee` and `/client/views` folder
-
-### Docker ###
-Dockerize it
-
-for Dev
-
-```
-docker build -t myrepo/meteordev -f Dockerfile-dev .
-```
-
-Run
-
-```
-docker run -it -p 3000:3000 --rm myrepo/meteordev
-```
-
-
-for Prod
-
-```
-docker build -t myrepo/mymeteorapp .
-```
-
-Run it
-```
-docker run --name mongodb -d mongo
-docker run -it --rm -p 3000:3000 --link mongodb:db -e "MONGO_URL=mongodb://db" -e "ROOT_URL=http://localhost:3000" myrepo/mymeteorapp
-```
-
-### Screenshots ###
-![alt tag](https://raw.githubusercontent.com/yogiben/meteor-starter/master/readme/meteor-starter-5.png)
-![alt tag](https://raw.githubusercontent.com/yogiben/meteor-starter/master/readme/login.png)
-![alt tag](https://raw.githubusercontent.com/yogiben/meteor-starter/master/readme/profile.png)
-![alt tag](https://raw.githubusercontent.com/yogiben/meteor-starter/master/readme/like_comment.png)
